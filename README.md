@@ -125,10 +125,11 @@ events for this agent will have these tags set.
 Cauchy is a trapperkeeper application and benefits from
 trapperkeeper's configuration system to easily load templates:
 
-      /usr/bin/java -Xmx256m -cp /opt/cauchy/jar/cauchy/lib/cauchy-jobs-kestrel-0.1.0-standalone.jar:/opt/cauchy/jar/cauchy/cauchy-0.1.0-standalone.jar puppetlabs.trapperkeeper.main --config /opt/cauchy/conf/cauchy.edn,/opt/cauchy/conf/cauchy-profiles
+```
+  java -cp ./target/cauchy-0.1.52-SNAPSHOT-standalone.jar cauchy.core ./conf/cauchy.edn,./conf/profiles/base.edn 
+```
 
-Here we add 2 additional jars to the classpath, and load the main
-configuration file plus a profiles-directory containing many profiles.
+Here we load the main configuration file plus a profiles-directory containing many profiles.
 Profiles selected in the main conf will be activated.
 
 ## Thanks
@@ -136,7 +137,7 @@ Profiles selected in the main conf will be activated.
 Cauchy wouldn't exist without these great libraries :
 
 * Riemann, by Kyle Kingsbury
-* trapperkeeper, by Puppet labs
+* trapperkeeper, by Puppet labs (Removed currently)
 * Chime, by James Anderson
 * Sigmund, by Chris Zheng and good old Hyperic Sigar.
 

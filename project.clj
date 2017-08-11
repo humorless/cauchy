@@ -1,4 +1,4 @@
-(defproject cauchy "0.1.51"
+(defproject cauchy "0.1.52-SNAPSHOT"
   :description "Cauchy is an agent for Riemann"
   :url "https://github.com/pguillebert/cauchy"
   :scm {:name "git"
@@ -19,14 +19,15 @@
                  [org.slf4j/jcl-over-slf4j "1.7.19"]
                  [log4j/log4j "1.2.17"]
                  [log4j/apache-log4j-extras "1.2.17"]
+                 [com.google.protobuf/protobuf-java  "3.1.0"]
                  [riemann-clojure-client "0.4.5"]
                  [jarohen/chime "0.1.9"]
                  [cheshire "5.5.0"]
                  [clj-http "2.1.0"]
                  [indigenous "0.1.0"]
                  [bultitude "0.2.8"]
-                 [luhhujbb/sigmund "0.2.1" :exclusions [log4j sigar/sigar-native-deps]]
+                 [sigmund "0.1.1" :exclusions [log4j sigar/sigar-native-deps]]
                  [clj-sockets "0.1.0"]
                  [stask/sigar-native-deps "1.6.4"]]
-  :aot :all
+  ;:aot :all
   :main cauchy.core)
